@@ -37,6 +37,7 @@ int execute(int entered, int sum)
     int random = generateRandoms(1, 6);
     if (random == entered)
     {
+        printf("\n%d\tVS\t%d\n\n", entered, random);
         printEnd(sum);
         return 0;
     }
@@ -50,6 +51,6 @@ int execute(int entered, int sum)
 }
 void printEnd(int sum)
 {
-    printf("Howwwzzzaaattt!!\n");
+    printf("Howwwzzzaaattt!!\n\n");
     printf("You're Out at %d runs\n", sum);
 }
