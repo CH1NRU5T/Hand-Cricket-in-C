@@ -16,13 +16,16 @@ int main()
         scanf("%d", &num);
         result = execute(num, sum);
         sum = result;
+
     } while (result != 0);
+    system("PAUSE");
     return 0;
 }
 void instructions()
 {
     printf("Hello! Welcome to the 'Hand Cricket' game. Refreshing some of your childhood memories eh...\n\n");
-    printf("The rules are simple! You have to score runs against the computer. Just type the number of runs you want to score, if the number you entered matches the number thrown by the computer, YOU'RE OUT!. If it does not match, carry on and build up your score.\n\n\n");
+    printf("The rules are simple! You have to score runs against the computer. Just type the number of runs you want to score, if the number you entered matches the number thrown by the computer, YOU'RE OUT!. If it does not match, carry on and build up your score,\n\n");
+    printf("WARNING!! You are only allowed to enter numbers from 1 to 6. Don\'t enter number beyond this range.\n\nEnjoy!!\n\n\n");
 }
 int generateRandoms(int lower, int upper)
 {
@@ -39,12 +42,14 @@ int execute(int entered, int sum)
     }
     else
     {
+        printf("\n%d\tVS\t%d\n\n", entered, random);
         sum += entered;
+        printf("Your current score is %d\n\n\n", sum);
         return sum;
     }
 }
 void printEnd(int sum)
 {
     printf("Howwwzzzaaattt!!\n");
-    printf("You're Out at %d runs", sum);
+    printf("You're Out at %d runs\n", sum);
 }
